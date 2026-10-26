@@ -2,7 +2,7 @@ const express = require("express");
 const { conexao } = require("./conexao");
 
 const app = express();
-
+// rota com expres
 app.use(express.json());
 
 app.use((req, res, next) => {

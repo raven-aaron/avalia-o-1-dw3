@@ -2,6 +2,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { DatabaseSync } = require("node:sqlite");
 
+//banco e table 
+
 const pastaDados = path.join(__dirname, "dados");
 fs.mkdirSync(pastaDados, { recursive: true });
 
@@ -33,7 +35,6 @@ banco.exec(`
   );
 `);
 
-// Os dados de exemplo são importados somente na criação do banco.
 if (bancoNovo) {
   const arquivoExemplos = path.join(__dirname, "..", "src", "data", "vacinas.json");
   const exemplos = JSON.parse(fs.readFileSync(arquivoExemplos, "utf8"));

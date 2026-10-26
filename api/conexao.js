@@ -2,7 +2,7 @@ const sql = require("mssql");
 const path = require("path");
 
 process.loadEnvFile(path.join(__dirname, ".env"));
-
+// Configuração do banco de dados
 const config = {
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
